@@ -14,7 +14,7 @@ chrome.storage.sync.get(STORAGE_KEY, (result) => {
 saveBtn.addEventListener('click', async () => {
   const url = urlInput.value.trim();
   await chrome.storage.sync.set({ [STORAGE_KEY]: url });
-  statusDiv.textContent = `Saved. ${url ? `Using: ${url}` : `Using default: ${DEFAULT_URL}`}`;
+  statusDiv.textContent = `已保存。${url ? `使用: ${url}` : `使用默认值: ${DEFAULT_URL}`}`;
   statusDiv.className = 'status saved';
   setTimeout(() => { statusDiv.textContent = ''; }, 3000);
 });
