@@ -38,6 +38,10 @@ export default defineConfig({
           dest: '.',
         },
         {
+          src: 'popup.html',
+          dest: '.',
+        },
+        {
           src: 'icons',
           dest: '.',
         },
@@ -52,6 +56,7 @@ export default defineConfig({
         background: resolve(__dirname, 'src/background/index.ts'),
         'content/trace': resolve(__dirname, 'src/content/trace.ts'),
         options: resolve(__dirname, 'src/options.ts'),
+        popup: resolve(__dirname, 'src/popup.ts'),
       },
       output: {
         entryFileNames: '[name].js',
