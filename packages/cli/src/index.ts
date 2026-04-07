@@ -29,7 +29,7 @@ import { traceCommand } from "./commands/trace.js";
 import { fetchCommand } from "./commands/fetch.js";
 import { siteCommand } from "./commands/site.js";
 import { historyCommand } from "./commands/history.js";
-import { statusCommand } from "./commands/daemon.js";
+import { statusCommand, startCommand, stopCommand } from "./commands/daemon.js";
 import { setJqExpression } from "./client.js";
 
 declare const __BB_BROWSER_VERSION__: string;
@@ -407,7 +407,21 @@ async function main(): Promise<void> {
         break;
       }
 
-      case "daemon":
+      case "daemon": {
+        const subCommand = parsed.args[0];
+        if (subCommand === "start") {
+          await startCommand({ json: parsed.flags.json });
+        } else if (subCommand === "stop") {
+          await stopCommand({ json: parsed.flags.json });
+        } else if (subCommand === "status" || !subCommand) {
+          await statusCommand({ json: parsed.flags.json });
+        } else {
+          console.error(`错误：未知子命令 "${subCommand}"`);
+          console.error("用法：ping-browser daemon [start|stop|status]");
+          process.exit(1);
+        }
+        break;
+      }
 
       case "close": {
         await closeCommand({ json: parsed.flags.json, tabId: globalTabId });
