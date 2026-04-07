@@ -37,6 +37,10 @@ export default defineConfig({
           src: 'options.html',
           dest: '.',
         },
+        {
+          src: 'icons',
+          dest: '.',
+        },
       ],
     }),
   ],

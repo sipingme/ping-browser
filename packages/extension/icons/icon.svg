@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="128" height="128" rx="24" fill="url(#bg)"/>
+  <!-- Browser window -->
+  <rect x="20" y="32" width="88" height="72" rx="8" fill="white" opacity="0.95"/>
+  <!-- Browser top bar -->
+  <rect x="20" y="32" width="88" height="16" rx="8" fill="#E5E7EB"/>
+  <rect x="20" y="40" width="88" height="8" fill="#E5E7EB"/>
+  <!-- Browser dots -->
+  <circle cx="32" cy="40" r="4" fill="#EF4444"/>
+  <circle cx="44" cy="40" r="4" fill="#F59E0B"/>
+  <circle cx="56" cy="40" r="4" fill="#10B981"/>
+  <!-- Ping signal waves -->
+  <circle cx="64" cy="76" r="8" fill="#4F46E5"/>
+  <circle cx="64" cy="76" r="16" fill="none" stroke="#4F46E5" stroke-width="3" opacity="0.6"/>
+  <circle cx="64" cy="76" r="24" fill="none" stroke="#4F46E5" stroke-width="2" opacity="0.4"/>
+  <circle cx="64" cy="76" r="32" fill="none" stroke="#4F46E5" stroke-width="1.5" opacity="0.2"/>
+</svg>
