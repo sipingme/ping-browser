@@ -2,7 +2,7 @@
 
 # ping-browser
 
-### BadBoy Browser
+### Browser Automation for AI Agents
 
 **Your browser is the API. No keys. No bots. No scrapers.**
 
