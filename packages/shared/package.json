@@ -10,7 +10,9 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -18,7 +20,7 @@
     "lint": "eslint src tsup.config.ts"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
+    "@types/node": "^22.19.17",
     "tsup": "^8.3.0",
     "typescript": "^5.7.0"
   }

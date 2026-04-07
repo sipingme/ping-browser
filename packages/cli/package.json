@@ -14,7 +14,7 @@
     "test": "tsx --test src/openclaw-json.test.ts src/openclaw-bridge.test.ts"
   },
   "dependencies": {
-    "@ping-browser/shared": "workspace:*"
+    "@ping-browser/shared": "file:../shared"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

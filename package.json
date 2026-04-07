@@ -22,7 +22,7 @@
     "test": "turbo run test",
     "lint": "turbo run lint",
     "clean": "turbo run clean && rm -rf node_modules dist extension",
-    "prepublishOnly": "pnpm build:release"
+    "prepublishOnly": "echo 'Build already done'"
   },
   "keywords": [
     "browser",

@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ping-browser/shared": "workspace:*"
+    "@ping-browser/shared": "file:../shared"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
