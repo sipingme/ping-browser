@@ -462,7 +462,11 @@ async function getTargets(): Promise<CdpTargetInfo[]> {
 
 
 async function ensurePageTarget(targetId?: string | number): Promise<CdpTargetInfo> {
-  const targets = (await getTargets()).filter((target) => target.type === "page");
+  const targets = (await getTargets()).filter((target) => 
+    target.type === "page" && 
+    !target.url.startsWith("chrome-extension://") &&
+    !target.url.startsWith("chrome://")
+  );
   if (targets.length === 0) throw new Error("No page target found");
 
   const persistedTargetId = targetId === undefined ? connectionState?.currentTargetId : undefined;
